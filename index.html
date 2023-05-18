@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Hamza@Welcome</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <style>
+        .custom-button {
+              margin-right: 10px;
+  /* Add any additional styling here */
+        }
+
+        .columns {
+          display: flex;
+        }
+  
+        .column.is-half {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+        }
+  
+        .column.is-half .card {
+          flex: 1;
+        }
+        .icon-text {
+  margin-left: 5px;
+}
+
+      </style>
+  </head>
+  <body>
+  <section class="section has-text-centered" >
+
+    <figure class="image container is-128*128 mb-4" >
+        <img class="is-rounded" src="https://cataas.com/cat" style="width: 100px; height: 100px;display: block; margin: 0 auto;" >
+    <p class="title">Hamza Page</p>
+    <p class="subtitle">@HamzaChabana</p>
+ 
+     <!-- This is a comment 
+    <p class="title is-4">Hamza Page</p>
+    <p class="subtitle is-6">@HamzaChabana</p>
+-->   
+<!--  
+   
+<a class="button is-info is-outlined is-rounded custom-button" href="#">Contact</a>
+<a class="button is-danger is-outlined is-rounded custom-button" href="#">LinkedIn</a>
+<a class="button is-dark is-outlined is-rounded custom-button" href="#">GitHub</a>
+-->
+<a class="button is-info is-outlined is-rounded" href={{url_for('contact')}} target="_blank">
+    <span class="icon">
+      <i class="fas fa-envelope"></i>
+    </span>
+    <span class="icon-text">Contact</span>
+  </a>
+  <a class="button is-danger is-outlined is-rounded" href="https://www.linkedin.com/in/hamza-chabana-6287201a0/" target="_blank">
+    <span class="icon">
+      <i class="fab fa-linkedin"></i>
+    </span>
+    <span class="icon-text">LinkedIn</span>
+  </a>
+  
+  <a class="button is-dark is-outlined is-rounded" href="#">
+    <span class="icon">
+      <i class="fab fa-github"></i>
+    </span>
+    <span class="icon-text">GitHub</span>
+  </a>
+  
+
+  
+
+    </figure>
+
+  </section>
+  <section class="columns">
+        <div class="column is-three-fifths is-offset-one-fifth has-background-light">
+            <div class="columns is-gapless">
+                
+                 <div class="column is=half">
+                    <div class="card m-3">
+                        <div class="card-content">
+                            <h1 class="title">About</h1>
+                                 <p style="text-indent: 20px;">{{profile.about}}</p>
+                        </div>
+                    </div>
+                    <div class="card m-3 has-background-link-light">
+                        <div class="card-content">
+                            <h1 class="title">Interests</h1>
+                            <p style="text-indent: 20px;">{{profile.interests}}</p>
+                        </div>
+                    </div>
+                </div>  
+                  
+                <div class="column is-half">
+                    <div class="card m-3 has-background-primary-light">
+                        <div class="card-content">
+                            <h1 class="title">Experience</h1>
+                                {{profile.experience}}
+                        </div>
+                    </div>
+                    <div class="card m-3 has-background-warning-light">
+                        <div class="card-content">
+                            <h1 class="title">Education</h1>
+                                {{profile.education}}
+                        </div>
+                    </div>
+                </div>
+
+
+        </div>
+        <div class="column is-full">
+            <div class="card m-3 has-background-success-light">
+                <div class="card-content">
+                    <h1 class="title">Life, Society & Culture</h1>
+                    <p>{{profile.life1}}<br><br></p>
+                    <p>{{profile.life2}}<br><br></p>
+                    <p>{{profile.life3}}<br><br></p>
+                    <p>{{profile.life4}}<br><br></p>
+
+                </div>
+            </div>
+        </div>
+    </div>  
+
+
+    
+  <section>
+
+
+
+
+
+  
+  </body>
+</html>
